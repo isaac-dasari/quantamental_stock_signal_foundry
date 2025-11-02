@@ -30,7 +30,7 @@ flowchart TD
     App[Streamlit UI]
     Store["Outputs<br/>features/prices/trades/metrics"]
 
-    External Data --> Ingest --> Features --> Labels --> Backtest --> App
+    External_Data --> Ingest --> Features --> Labels --> Backtest --> App
     Backtest --> Store --> App
 ```
 
