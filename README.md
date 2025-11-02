@@ -1,5 +1,11 @@
 # Quantamental Signal Foundry
-This Streamlit project pulls together pricing, macro and news data, builds quantamental features, labels them, trains an ML classifier with embargoed time-series CV, tunes thresholds, backtests, and finally surfaces charts and downloads.
+Quantamental Signal Foundry is a research sandbox and demo app for building machine-learning driven trading signals. It orchestrates a full quantamental workflow—fetching prices, macro benchmarks, and news headlines, engineering robust factor features, labeling trades, training models, tuning thresholds, and visualising backtest performance in a Streamlit UI.
+
+The repo contains:
+- `app.py`: production-ready Streamlit dashboard for selecting tickers, running the full pipeline, and inspecting metrics/plots/downloads.
+- `alpha_pipeline.py`: the main data + modeling pipeline shared with the app (news sentiment, macro covariates, technical factors, barrier labeling, TS cross-validation).
+- `quant_pipeline.py`: a lightweight variant focused on faster iteration or notebook usage.
+- `notebook.ipynb`: exploratory research notebook with examples and sweep outputs.
 
 ## Quickstart
 ```bash
