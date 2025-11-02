@@ -21,14 +21,14 @@ flowchart TD
     subgraph External Data
         YF[YFinance pricing]
         GDELT[GDELT news API]
-        Macro[Macro benchmarks (SPY, QQQ, DXY, VIX)]
+        Macro["Macro benchmarks<br/>(SPY, QQQ, DXY, VIX)"]
     end
-    Ingest[Fetchers\n(prices, macro, actions, news)]
-    Features[Feature engineering\n(technicals, momentum, sentiment, macro context)]
-    Labels[Labeling & ML\n(triple-barrier or next-day; TS CV)]
-    Backtest[Threshold tuning & backtest]
+    Ingest["Fetchers<br/>(prices, macro, actions, news)"]
+    Features["Feature engineering<br/>(technicals, momentum, sentiment, macro context)"]
+    Labels["Labeling & ML<br/>(triple-barrier or next-day; TS CV)"]
+    Backtest["Threshold tuning & backtest"]
     App[Streamlit UI]
-    Store[(Outputs\nfeatures/prices/trades/metrics)]
+    Store["Outputs<br/>features/prices/trades/metrics"]
 
     External Data --> Ingest --> Features --> Labels --> Backtest --> App
     Backtest --> Store --> App
@@ -74,5 +74,4 @@ These are the same files the Streamlit app loads after you click **Run Backtest*
 ## Operational Notes
 - No API keys or credentials are required; the project relies on public endpoints.
 - Generated data, cached responses, and notebooks are excluded from version control via `.gitignore`.
-- Suggested repository name for GitHub: `quantamental-signal-foundry`.
 - For new research ideas, inspect `quant_pipeline.py` (slimmer runtime) or `alpha_pipeline.py` (research-focused, used by the app).
